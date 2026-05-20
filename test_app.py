@@ -1,0 +1,2 @@
+ÿþimport streamlit as st
+st.write('AgriSync is alive!')
