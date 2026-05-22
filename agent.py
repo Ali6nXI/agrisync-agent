@@ -151,11 +151,9 @@ def _execute_tool(name: str, args: dict) -> str:
 class AgriSyncAgent:
     def __init__(self):
         self.client = genai.Client(
-            vertexai=True,
-            project=Config.GCP_PROJECT_ID,
-            location="us-central1"
+    api_key=Config.GOOGLE_API_KEY
         )
-        self.model = "gemini-2.0-flash-001"
+        self.model = "gemini-2.0-flash"
         self.conversation_history = []
         self.tool_calls_log = []
 
